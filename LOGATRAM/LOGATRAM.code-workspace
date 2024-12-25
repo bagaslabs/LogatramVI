@@ -1,0 +1,15 @@
+{
+  "folders": [
+	{
+		"name": "LOGATRAM",
+		"path": "."
+	},
+	{
+		"name": "OwlCarousel2-2.3.4",
+		"path": "../../../Downloads/OwlCarousel2-2.3.4"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "LOGATRAM"
+  }
+}

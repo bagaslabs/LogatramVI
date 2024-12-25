@@ -1,0 +1,48 @@
+:root {
+  --primary: #c38f5c;
+  --bg: #000000;
+}
+
+* {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+}
+
+.hero{
+  background-image: url('./image/bg.jpg');
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.navbar{
+  background-color: rgba(0, 0, 0, .75);
+}
+
+.navbar .navbar-brand {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  font-style: italic;
+}
+
+.navbar .navbar-brand span {
+  color: var(--primary);
+}
+
+.btn-cta{
+  background-color: var(--primary);
+}

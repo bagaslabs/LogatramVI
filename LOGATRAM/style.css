@@ -1,0 +1,537 @@
+:root {
+  --primary: #195fb9;
+  --bg: #000000;
+}
+
+* {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: #fff;
+  min-height: 2000px;
+}
+
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 7%;
+  background-color: rgba(1, 1, 1, 0.8);
+  border-bottom: 1px solid var(--primary);
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar-logo {
+  display: flex; /* Membuat logo dan teks dalam satu baris */
+  align-items: center; /* Menyelaraskan elemen secara vertikal */
+  text-decoration: none; /* Menghilangkan garis bawah pada link */
+  color: #fff; /* Warna teks */
+}
+
+.navbar .navbar-logo .lgt {
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+.navbar-logo img {
+  width: 50px; /* Ukuran logo (disesuaikan) */
+  height: 50px; /* Ukuran logo (disesuaikan) */
+  margin-right: 10px; /* Jarak antara logo dan teks */
+  padding-bottom: 5px;
+}
+
+.navbar-logo span {
+  font-size: 2rem; /* Sesuaikan ukuran teks */
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0 0.5rem;
+  opacity: 0.8;
+}
+
+.navbar-nav a.active {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: '';
+  display: block;
+  padding-bottom: 0.2rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.3s linear;
+}
+
+.navbar .navbar-nav a:hover::after{
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-sosmed a{
+  color: #fff;
+  margin: 0 0.8rem;
+}
+
+.navbar .navbar-sosmed a:hover{
+  color: var(--primary);
+}
+
+.navbar .navbar-extra a{
+  color: #fff;
+  margin: 0 0.5 rem;
+}
+
+.navbar .navbar-extra a:hover{
+  color: var(--primary);
+}
+
+#menu {
+  display: none;
+}
+
+.hero{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url(image/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero::after{
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0%;
+  background: linear-gradient(0deg, rgba(1,1,3, 1) 5%, rgba(255,255,255,0) 25%);
+}
+
+.hero .content{
+  padding: 1.4rem 7%;
+  max-width: 55rem;
+  align-items: center; 
+}
+
+.hero .content h1{
+  font-family: "Montserrats", sans-serif;
+  font-weight: 700;
+  padding-top: 10%;
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 2px 2px 3px rgba(1,1,3, 0.5);
+  line-height: 1;
+}
+
+.hero .content p{
+  font-family: "Poppins", sans-serif;
+  padding-top: 5px;
+  font-weight: 400;
+  line-height: 1.4;
+  text-shadow: 2px 2px 3px rgba(1,1,3, 0.5);
+}
+
+.hero .content .cta{
+  font-family: "Montserrats", sans-serif;
+  margin-top: 0.5rem;
+  display: inline-block;
+  padding: 0.7rem 2rem;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1,1,3, 0.5);
+}
+
+.hero .content .cta:hover{
+  color: #6b4a30;
+}
+
+.tentang {
+  padding: 7rem 7% 1.4rem;
+}
+
+.tentang h2{
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 3rem;
+  color: var(--primary);
+}
+
+.tentang h2 span{
+  font-family: 'Poppins', sans-serif;
+  font-style: italic;
+  color: #fff;
+}
+
+.tentang .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tentang .row .content h3{
+  font-size: 1.6rem;
+  margin-bottom: 0.1rem;
+  color: var(--primary);
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+
+}
+
+.tentang .row .content p{
+  text-align: justify;
+}
+
+.tentang .row .content .tag{
+  margin-top: 2.5rem;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  border-radius: 0.5rem;
+  background-color: #3a74c0;
+  box-shadow: 1px 1px 3px rgba(1,1,3, 0.5);
+}
+
+
+.matalomba {
+  display: flex;
+  margin-top: -7rem;
+  justify-content: center;
+  align-items: center;
+  background: 
+    linear-gradient(to bottom, rgba(1,1,3, 1) 3%, rgba(255,255,255,0) 20%),
+    linear-gradient(0deg, rgba(1,1,3, 1) 5%, rgba(255,255,255,0) 40%),
+    url(image/john-towner-3Kv48NS4WUU-unsplash.jpg);
+    z-index: -1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+
+.matalombas .matlom h2{
+  padding: 8rem 7% 1.4rem;
+  font-style: italic;
+  text-align: center; 
+  font-size: 1.8rem;
+  margin-bottom: -3rem;
+  color: var(--primary);
+  position: relative;
+  z-index: 10;
+}
+
+.matalombas h2 span{
+  color: #fff;
+}
+
+.matalomba .owl-carousel .container {
+  margin-top: 2rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 100px 50px;
+  padding: 50px 20px;
+}
+
+.matalomba .owl-carousel .container .card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 350px;
+  max-width: 100%;
+  height: 300px;
+  background-color: var(--primary);
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+  transition: 0.5s;
+  border-radius: 10px;
+  z-index: 0;
+}
+
+.matalomba .owl-carousel .container .card .img-box{
+  position: absolute;
+  top: 20px;
+  width: 300px;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.matalomba .owl-carousel .container .card .img-box img{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.matalomba .owl-carousel .container .card:hover {
+  height: 350px;
+  z-index: 5;
+}
+
+.matalomba .owl-carousel .container .card:hover .img-box {
+  top: -60px;
+  scale: 0.8;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+.matalomba .owl-carousel .container .card .content {
+  position: absolute;
+  top: 252px;
+  width: 100%;
+  height: 35px;
+  padding: 0 30px;
+  text-align: center;
+  overflow: hidden; 
+  transition: 0.2s; 
+  transition-behavior: smooth;
+}
+
+.matalomba .owl-carousel .container .card:hover .content {
+  top: 150px;
+  height: 250px;
+}
+
+.matalomba .owl-carousel .container .card .content h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  pointer-events: none;
+}
+
+.matalomba .owl-carousel .container .card .content p {
+  color: #fff;
+  margin-top: 10px;
+  text-align: justify;
+}
+
+.daftar {
+  padding: 9rem 7% 1.4rem;
+  text-align: center;
+  display: inline-flexbox;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  height: 100vh;
+  background: 
+  linear-gradient(to bottom, rgba(1,1,3, 1) 5%, rgba(255,255,255,0) 40%),
+  linear-gradient(0deg, rgba(1,1,3, 1) 2%, rgba(255,255,255,0) 20%),
+  url(image/jake-weirick-Zu6wtAvLWgE-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.daftar h2{
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.8rem;
+  margin-top: -1rem;
+}
+
+.daftar h2 span{
+  color: var(--primary);
+  font-family: 'Poppins', sans-serif;
+  font-style: italic;
+}
+
+.daftar h2 .vi {
+  color: #fff;
+  font-style: italic;
+}
+
+.daftar .link {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.daftar .link .btn-link {
+  padding: 1rem 7%;
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  background-color: var(--primary);
+  border-radius: 15px;
+  margin: 0.8rem 0;
+  min-height: 3rem;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  width: 30%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.daftar .link .btn-link:hover {
+  background-color: #fff;
+  color: var(--primary);
+}
+
+.cp{
+  display: none;
+  width: 30%;
+  padding: 10px;
+  border-radius: 15px;
+  border: 3px solid var(--primary);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+.cp.active{
+  display: block;
+  transition: 0.8s;
+}
+
+.cp a{
+  color: #fff;
+}
+
+
+/* Media Queries */
+/* Tablet */
+@media (max-width: 1000px) {
+  html {
+    font-size: 70%;
+  }
+
+}
+
+/* Handphone */
+@media (max-width: 650px) {
+  html {
+    font-size: 55%;
+  }
+  #menu {
+    display: inline-block;
+  }
+
+  .navbar {
+    background-color: rgba(1, 1, 1, 0.6);
+  }
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -1000%;
+    background-image: url(image/side.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    transform: scaleX(-1);
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-extra {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+  .navbar .navbar-nav a{ 
+    color: #fff;
+    opacity: .8;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+    transform: scaleX(-1);
+  }
+  .navbar .navbar-nav a:hover{
+    color: #fff;
+    opacity: 100%;
+  }
+  .navbar .navbar-nav a::after{
+    border-bottom: 0.1rem solid #fff;
+    transform-origin: 0 0;
+    transform: scaleX(0);
+  }
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.25);
+    transition: 0.3s linear;
+  }
+  .hero .content {
+    max-width: 40rem;
+  }
+  .hero .content p{
+    max-width: 90%;
+  }
+  .tentang {
+    padding: 7rem 7% 1.4rem;
+  }
+  .tentang h2{
+    font-size: 2.5rem;
+  }
+}
+
+.owl-dots {
+  text-align: center;
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: block !important;
+}
+ .owl-dot {
+  display: inline-block;
+  margin-top: -5rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+.owl-dot.active {
+  opacity: 1;
+} 
+
+footer{
+  padding: 25px 0;
+  text-align: center;
+}
